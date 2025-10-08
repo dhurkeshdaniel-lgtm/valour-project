@@ -1,0 +1,227 @@
+  /* ---------- Variables & Base ---------- */
+  :root{
+    --bg1: #05060b;
+    --bg2: #0b1220;
+    --neon: #00ffe4;
+    --neon-2: #ff3bd8;
+    --muted: #9fb3bf;
+    --card: rgba(255,255,255,0.04);
+    --glass: rgba(255,255,255,0.03);
+    --radius: 16px;
+    --ease: cubic-bezier(.16,.9,.3,1);
+    --maxw: 1200px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: radial-gradient(1200px 600px at 15% 20%, rgba(2,8,20,0.6), transparent),
+                linear-gradient(180deg,var(--bg1), var(--bg2));
+    color:#eafaf6;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    display:flex;
+    justify-content:center;
+    padding:36px 24px;
+  }
+
+  /* subtle animated grid lines for cyberpunk feel */
+  .scene{
+    width:100%;
+    max-width:var(--maxw);
+    position:relative;
+    overflow:visible;
+  }
+  .cyber-grid{
+    pointer-events:none;
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 160px 160px, 160px 160px;
+    mix-blend-mode: overlay;
+    opacity:0.08;
+    transform: translateY(0);
+    animation: drift 18s linear infinite;
+  }
+  @keyframes drift{ from{transform:translateY(0)} to{transform:translateY(-40px)} }
+
+  /* Header */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:18px;
+  }
+  .brand{
+    display:flex; gap:12px; align-items:center;
+  }
+  .logo{
+    width:54px; height:54px; border-radius:12px;
+    /* background: linear-gradient(135deg, var(--neon), var(--neon-2)); */
+    display:grid; place-items:center; color:#071018; font-weight:900; font-size:1.2rem;
+    box-shadow:0 10px 40px rgba(0,255,228,0.06);
+  }
+  .brand h1{font-size:1.35rem; margin:0; letter-spacing:0.6px}
+  nav.main{
+    display:flex; gap:12px; align-items:center;
+  }
+  nav.main a{
+    color:var(--muted); text-decoration:none; padding:10px 14px; border-radius:10px;
+    transition: all .18s var(--ease);
+  }
+  nav.main a:hover{ color:#fff; transform:translateY(-3px); }
+  .btn-cta{
+    background: linear-gradient(90deg,var(--neon), var(--neon-2));
+    color:#071018; font-weight:800; padding:10px 14px; border-radius:10px; border:0; cursor:pointer;
+    box-shadow: 0 10px 30px rgba(0,255,228,0.06);
+  }
+
+  /* Layout grid for desktop */
+  .content{
+    display:grid;
+    grid-template-columns: 1fr 520px;
+    gap:28px;
+    align-items:start;
+  }
+
+  /* Left column - hero & slideshow */
+  .panel{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    border-radius: var(--radius);
+    padding:18px;
+    border:1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 12px 50px rgba(2,6,10,0.6);
+  }
+
+  .hero{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .hero-text{
+    flex:1;
+    padding-right:12px;
+  }
+  .kicker{ background: rgba(0,255,228,0.06); color:var(--neon); padding:8px 12px; border-radius:999px; display:inline-block; font-weight:700; letter-spacing:0.7px;}
+  h2{
+    margin:12px 0 8px 0; font-size:2rem; line-height:1.02;
+    text-shadow: 0 6px 30px rgba(0,0,0,0.5);
+  }
+  p.lead{ color:var(--muted); margin:0 0 14px 0; max-width:48ch }
+
+  .spec-badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px }
+  .badge{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:8px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.02);
+    color:#e8fff9; font-weight:700; display:inline-flex; gap:8px; align-items:center;
+  }
+
+  /* Slideshow */
+  .slideshow{
+    width:100%;
+    max-width:760px;
+    margin-top:14px;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    height:270px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+    border:1px solid rgba(255,255,255,0.03);
+  }
+  .slides{ height:100%; display:flex; transition:transform 700ms var(--ease); will-change:transform; }
+  .slide{
+    min-width:100%; height:100%; background-size:cover; background-position:center;
+    position:relative; display:flex; align-items:flex-end; justify-content:center;
+    padding: 25px;
+  }
+  .slide::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 30%, rgba(2,8,12,0.75) 100%); }
+  .slide-card{
+    z-index:3;
+    width:82%;
+    display:flex; gap:16px; align-items:center; padding:12px; border-radius:12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.03);
+    transform: translateY(18px);
+  }
+  img{
+    width: 260px;
+    height: 200px;
+  }
+  .thumb{ width:260px; height:200px; border-radius:10px;
+    overflow: hidden;
+     background-size:cover;
+      background-position:center;
+       flex-shrink:0;
+     border:1px solid rgba(255,255,255,0.04); }
+
+  /* controls */
+  .controls{ position:absolute; top:12px; left:12px; right:12px; display:flex; justify-content:space-between; z-index:6; }
+  .ctrl-btn{ background:rgba(2,6,8,0.45); color:#eafaf6; border:0; width:44px; height:44px; border-radius:10px; cursor:pointer; font-weight:700; }
+  .dots{ position:absolute; bottom:12px; left:0; right:0; display:flex; justify-content:center; gap:10px; z-index:6; }
+  .dot{ width:11px;height:11px;border-radius:999px;background:rgba(255,255,255,0.12); cursor:pointer; transition:all .18s }
+  .dot.active{ transform:scale(1.6); background:linear-gradient(90deg,var(--neon),var(--neon-2)); box-shadow:0 10px 24px rgba(0,255,228,0.06) }
+
+  /* Right column - feature cards */
+  .side{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    width:100%;
+  }
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.03);
+  }
+  .spec-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px }
+  .spec{
+    display:flex; gap:12px; align-items:center; padding:10px; border-radius:10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  .spec .icon{ width:54px; height:54px; border-radius:10px; display:grid;place-items:center; font-weight:900; background:linear-gradient(135deg,var(--neon),var(--neon-2)); color:#071018 }
+  .spec h4{margin:0;font-size:1rem}
+  .spec p{margin:4px 0 0 0;color:var(--muted);font-size:.9rem}
+
+  /* Menu overlay (animated) */
+  .menu-btn{
+    background: transparent; border: 1px solid rgba(255,255,255,0.04);
+    padding:8px 10px; border-radius:10px; color:var(--muted); cursor:pointer;
+  }
+  .menu-overlay{
+    position:fixed;
+    right:-420px;
+    top:0;
+    height:100%;
+    width:420px;
+    background: linear-gradient(180deg, rgba(2,8,12,0.95), rgba(6,12,18,0.96));
+    box-shadow:-60px 20px 120px rgba(2,6,10,0.8);
+    transition: right 450ms var(--ease);
+    z-index:60;
+    padding:28px;
+    display:flex; flex-direction:column; gap:18px;
+    border-left: 1px solid rgba(255,255,255,0.03);
+  }
+  .menu-overlay.open{ right:0; }
+
+  .menu-links{ display:flex; flex-direction:column; gap:12px; margin-top:6px }
+  .menu-links a{ color:#e9fff8; text-decoration:none; padding:12px 14px; border-radius:10px; background: rgba(255,255,255,0.02); display:block; }
+  .menu-header{ display:flex; justify-content:space-between; align-items:center; gap:8px }
+
+  /* Footer */
+  footer{ margin-top:18px; color:var(--muted); display:flex; justify-content:space-between; align-items:center; gap:12px }
+
+  /* small-ish screens: keep desktop feel but responsive */
+  @media (max-width:1100px){
+    .content{ grid-template-columns:1fr; }
+    .slideshow{ height:360px }
+  }
+  .si{
+    width: 40px;
+    height: 35px;
+  }

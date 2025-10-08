@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>VALOUR — Mobile. Refined.</title>
+<meta name="description" content="VALOUR V1 — 120Hz • 5000mAh • 108MP • Snapdragon 7+ Gen 3 — Cyberpunk themed promo site" />
+<link rel="stylesheet" href="sample1.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="cyber-grid" aria-hidden="true"></div>
+
+    <header>
+      <div class="brand">
+        <div class="logo"><img class="logo" src="Picsart_25-10-07_11-07-11-910.png" alt=""></div>
+        <div>
+          <h1>VALOUR</h1>
+          <div style="font-size:.85rem; color:var(--muted)">Powerd by • Daniel and Meirajan</div>
+        </div>
+      </div>
+
+      <nav class="main" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="https://www.instagram.com/__danieee.__?igsh=c3BpMnl4cHE0dWli">Help</a>
+        <a href="https://www.instagram.com/__danieee.__?igsh=c3BpMnl4cHE0dWli">Support</a>
+        <a href="https://www.instagram.com/__danieee.__?igsh=c3BpMnl4cHE0dWli">Contact</a>
+        <button class="menu-btn" id="openMenu" aria-haspopup="true" aria-controls="menuOverlay">Menu</button>
+      </nav>
+    </header>
+
+    <main class="content" role="main">
+      <!-- Left: Hero & Slideshow -->
+      <div>
+        <div class="panel hero">
+          <div class="hero-text">
+            <div class="kicker">Introducing • VALOUR</div>
+            <h2>Back to the future</h2>
+            <p class="lead">Valour is a major global technology company from India, known for its extensive telecommunications and consumer product lines.Parts are imported from U.S</p>
+
+            <div class="spec-badges">
+              <div class="badge">120Hz Refresh Rate</div>
+              <div class="badge">5000 mAh</div>
+              <div class="badge">108MP Camera</div>
+              <div class="badge">Snapdragon 7+ Gen 3</div>
+            </div>
+
+            <div style="margin-top:12px">
+              <!-- <button class="btn-cta" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">Pre-order Now</button> -->
+              <!-- <button class="menu-btn" id="openMenuSmall" style="margin-left:8px">Menu</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="panel slideshow" aria-roledescription="carousel" aria-label="Valour slideshow">
+          <div class="controls">
+            <button class="ctrl-btn" id="prev" aria-label="Previous slide">‹</button>
+            <button class="ctrl-btn" id="next" aria-label="Next slide">›</button>
+          </div>
+
+          <div class="slides" id="slides">
+            <!-- Replace these background URLs with your own uploaded images if needed -->
+            <div class="slide">
+              <div class="slide-card">
+                <div class="thumb"><img src="slide1.jpg" alt=""></div>
+                <div style="color:#e7fff8">
+                <p>Colour variations like Postha green, metallic silver, purple, black.Which gives an unique look and rich feeling</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-card">
+                <div class="thumb"><img src="slide2.jpg" alt=""></div>
+                <div style="color:#e7fff8">
+                  <p>108-megapixel (MP) camera is a high-resolution smartphone camera that captures incredibly detailed images, allowing for large prints and extensive cropping without losing clarity</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-card">
+                <div class="thumb"><img src="slide3.jpg" alt=""></div>
+                <div style="color:#e7fff8">
+                 <p>The Snapdragon 7 Gen 3 is a Qualcomm 4nm chipset designed for premium mid-range smartphones, offering enhanced performance, improved AI capabilities, and efficient power management thanks to its Kryo CPU and Adreno GPU</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dots" id="dots" role="tablist" aria-label="Slide navigation">
+            <div class="dot" data-index="0" role="tab" tabindex="0" aria-selected="true"></div>
+            <div class="dot" data-index="1" role="tab" tabindex="0" aria-selected="false"></div>
+            <div class="dot" data-index="2" role="tab" tabindex="0" aria-selected="false"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Specs & CTA -->
+      <aside class="side">
+        <div class="card">
+          <h3 style="margin:0 0 8px 0">Key Specifications</h3>
+          <div class="spec-grid">
+            <div class="spec">
+              <div class="icon">120</div>
+              <div>
+                <h4>120Hz Refresh Rate</h4>
+                <p>Ultra-smooth animations and responsive touch for gaming & browsing</p>
+              </div>
+            </div>
+
+            <div class="spec">
+              <div class="icon">5K</div>
+              <div>
+                <h4>5000 mAh</h4>
+                <p>Large battery for extended all-day use and multi-day standby</p>
+              </div>
+            </div>
+
+            <div class="spec">
+              <div class="icon">108</div>
+              <div>
+                <h4>108MP Camera</h4>
+                <p>High-res sensor with multi-frame AI processing for crisp photos</p>
+              </div>
+            </div>
+
+            <div class="spec">
+              <div class="icon">7+</div>
+              <div>
+                <h4>Snapdragon 7+ Gen 3</h4>
+                <p>Efficient high-performance SoC for gaming, multitasking & battery savings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="buy">
+          <h3 style="margin:0 0 8px 0">Order & Offers</h3>
+          <p style="color:var(--muted); margin:0 0 12px 0">Starting at <strong style="font-size:1.2rem; color: #fff">₹29,999</strong> • Free delivery • 1 year warranty</p>
+          <div style="display:flex; gap:10px;">
+            <a href="https://www.flipkart.com/huawei-p9-prestige-gold-32-gb/p/itmeuyd96fpkjnyb?pid=MOBEKQHYZTPZ6FZ5&lid=LSTMOBEKQHYZTPZ6FZ5QITKVH&marketplace=FLIPKART&hl_lid=&q=huawei+mobiles+5g&store=tyy/4io&_refId=&_appId=CL&_refId=&_appId=WA"> <button class="btn-cta">Pre-order</button></a>
+            <button class="menu-btn" id="contactBtn">Limited Offers</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px 0">Support</h3>
+          <p style="color:var(--muted); margin:0 0 10px 0">Need help? Visit Help Center or contact our support team.</p>
+          <div style="display:flex; gap:8px;">
+            <a href="https://discord.gg/RQjDTx8ZaP" style="padding:4px 1px; border-radius:10px; background:rgba(255,255,255,0.02); color:#eafaf6; text-decoration:none"><img class="si" src="Picsart_25-10-08_14-17-42-629.png" alt=""></a>
+            <a href="https://www.instagram.com/__danieee.__?igsh=c3BpMnl4cHE0dWli" style="padding:4px 1px; border-radius:10px; background:rgba(255,255,255,0.02); color:#eafaf6; text-decoration:none"><img class="si" src="Picsart_25-10-08_14-13-20-083.png" alt=""></a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© VALOUR 2025</div>
+      <div style="color:var(--muted)">® All rights reserved</div>
+    </footer>
+
+    <!-- Menu overlay -->
+    <div id="menuOverlay" class="menu-overlay" aria-hidden="true">
+      <div class="menu-header">
+        <div style="display:flex; gap:12px; align-items:center">
+          <div class="logo" style="width:46px; height:46px;">V</div>
+          <div>
+            <div style="font-weight:800">VALOUR</div>
+            <div style="font-size:.82rem; color:var(--muted)">Main Menu</div>
+          </div>
+        </div>
+        <button id="closeMenu" class="menu-btn" aria-label="Close menu">Close</button>
+      </div>
+
+      <nav class="menu-links" aria-label="Overlay menu">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#specs">Specifications</a>
+        <a href="#help">Help</a>
+        <a href="#support">Support</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="margin-top:auto; color:var(--muted); font-size:.92rem">Call Sales: <strong style="color:#fff">1800-VALOUR</strong></div>
+    </div>
+  </div>
+
+<script>
+/* ---------- Slideshow logic (autoplay + arrows + dots + keyboard + swipe) ---------- */
+(function(){
+  const slidesEl = document.getElementById('slides');
+  const slides = slidesEl.children;
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  let idx = 0;
+  const total = slides.length;
+  const interval = 4200;
+  let timer = null;
+
+  function go(i){
+    idx = (i + total) % total;
+    slidesEl.style.transform = `translateX(${idx * -100}%)`;
+    dots.forEach((d,di)=> {
+      d.classList.toggle('active', di === idx);
+      d.setAttribute('aria-selected', di===idx);
+    });
+  }
+  function start(){ timer = setInterval(()=> go(idx+1), interval); }
+  function stop(){ if(timer) clearInterval(timer); timer = null; }
+
+  next.addEventListener('click', ()=>{ go(idx+1); reset(); });
+  prev.addEventListener('click', ()=>{ go(idx-1); reset(); });
+
+  dots.forEach(d=>{
+    d.addEventListener('click', ()=>{ go(Number(d.dataset.index)); reset(); });
+    d.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(Number(d.dataset.index)); reset(); }});
+  });
+
+  function reset(){ stop(); start(); }
+  go(0); start();
+
+  // keyboard nav
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'ArrowLeft') { prev.click(); }
+    if(e.key === 'ArrowRight') { next.click(); }
+  });
+
+  // basic swipe support
+  let startX = 0, moving=false;
+  slidesEl.addEventListener('pointerdown', (ev)=>{ startX = ev.clientX; moving=true; slidesEl.setPointerCapture(ev.pointerId); });
+  slidesEl.addEventListener('pointerup', (ev)=>{ if(!moving) return; moving=false; const diff = ev.clientX - startX; if(Math.abs(diff) > 60){ if(diff < 0) go(idx+1); else go(idx-1); reset(); } });
+  slidesEl.addEventListener('pointercancel', ()=> moving=false);
+})();
+
+/* ---------- Menu overlay open/close animation ---------- */
+(function(){
+  const openBtns = [document.getElementById('openMenu'), document.getElementById('openMenuSmall')].filter(Boolean);
+  const closeBtn = document.getElementById('closeMenu');
+  const overlay = document.getElementById('menuOverlay');
+
+  openBtns.forEach(b=> b.addEventListener('click', ()=>{
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }));
+
+  closeBtn.addEventListener('click', ()=> {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  });
+
+  // close on ESC
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape'){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }});
+})();
+
+/* ---------- Small animation: animate number counters when visible ---------- */
+(function(){
+  const counters = [
+    {elText: null, selector: '.icon:nth-child(1)', target: 120}, // not used directly, we'll animate inline style via CSS feel
+  ];
+  // For this layout we keep simple micro interactions only (hover effects + transitions)
+})();
+
+/* ---------- Preload images for smooth feeling ---------- */
+(function(){
+  const bgEls = document.querySelectorAll('.slide');
+  bgEls.forEach(s => {
+    const bg = s.style.backgroundImage.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+    if(bg){
+      const im = new Image();
+      im.src = bg;
+    }
+  });
+})();
+</script>
+</body>
+</html>
